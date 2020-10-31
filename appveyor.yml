@@ -1,6 +1,8 @@
 version: 2020.10.{build}
 image: Ubuntu1804
-clone_depth: 5
 clone_folder: /pegasus
+before_build:
+  - cd /pegasus
+  - git submodule update --init --recursive
 build_script:
 - sh: /pegasus/run.sh build
