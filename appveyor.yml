@@ -1,0 +1,6 @@
+version: 2020.10.{build}
+image: Ubuntu1804
+clone_depth: 5
+clone_folder: /pegasus
+build_script:
+- sh: /pegasus/run.sh build
